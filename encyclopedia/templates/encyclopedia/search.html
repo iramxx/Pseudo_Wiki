@@ -1,0 +1,15 @@
+{%extends "encyclopedia/layout.html" %}
+
+{% block title%}
+    {Search results}
+{% endblock %}
+
+{% block body%}
+    {%if not listsubs%}
+        <h1>Page not found.</h1>
+    {%else%}
+        {%for name in listsubs%}
+            <a href="{%url 'entry' name%}">{{name}}</a>
+        {%endfor%}
+    {%endif%}
+{%endblock%}

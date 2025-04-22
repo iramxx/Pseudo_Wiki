@@ -1,0 +1,22 @@
+{%extends "encyclopedia/layout.html"%}
+
+{%block title%}
+    Create a new entry
+{%endblock%}
+
+{%block body%}
+
+    {% if messages%}
+        {% for message in messages %}
+        <div role="alert">{{message}}</div>
+        {% endfor %}
+    {%endif%}
+    <h1>Create a new entry</h1> 
+    <form action="{% url 'new'%}" method="post">
+        {% csrf_token %}
+        <input type="text" name="title" placeholder="Type the title" value="{{title|default:''}}" required><br>
+        <textarea placeholder="Type the content of your entry" name="content" style="width: 1200px; height: 500px;" required>{{content|default:''}}</textarea>
+        <br>
+        <button type="submit" name="save" style="width: 100px; height: 50px;">Save your content</button>
+    </form>
+{%endblock%} 
