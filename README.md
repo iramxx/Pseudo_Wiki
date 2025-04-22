@@ -1,4 +1,4 @@
-#  Wikipedia Encyclopedia Clone
+# Pseudo-wikipedia
 
 ##  The Idea of the Project
 This project is a simplified Wikipedia-style encyclopedia web application. It allows users to view, search for, create, edit, and randomly browse content pages written in Markdown. The system processes Markdown into HTML for display and maintains all entries in a structured format. The goal was to build a lightweight CMS-style app with core content management features and intuitive navigation.
